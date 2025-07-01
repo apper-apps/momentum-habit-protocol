@@ -1,8 +1,9 @@
 import userStatsData from '@/services/mockData/userStats.json'
 
 class UserService {
-  constructor() {
-    this.stats = { ...userStatsData }
+constructor() {
+    // Deep clone to ensure all nested objects are mutable
+    this.stats = JSON.parse(JSON.stringify(userStatsData))
   }
 
   async delay(ms = 250) {
