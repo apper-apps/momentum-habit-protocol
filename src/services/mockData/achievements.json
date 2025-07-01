@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "name": "First Step",
+    "description": "Complete your first habit",
+    "icon": "Target",
+    "unlockedAt": "2024-01-01T08:15:00Z",
+    "points": 10,
+    "category": "milestone"
+  },
+  {
+    "Id": 2,
+    "name": "Streak Starter",
+    "description": "Maintain a 3-day streak",
+    "icon": "Flame",
+    "unlockedAt": "2024-01-03T08:15:00Z",
+    "points": 25,
+    "category": "streak"
+  },
+  {
+    "Id": 3,
+    "name": "Habit Master",
+    "description": "Create 5 different habits",
+    "icon": "Crown",
+    "unlockedAt": null,
+    "points": 50,
+    "category": "creation"
+  },
+  {
+    "Id": 4,
+    "name": "Consistency Champion",
+    "description": "Maintain a 7-day streak",
+    "icon": "Trophy",
+    "unlockedAt": null,
+    "points": 100,
+    "category": "streak"
+  },
+  {
+    "Id": 5,
+    "name": "Wellness Warrior",
+    "description": "Complete 30 wellness habits",
+    "icon": "Heart",
+    "unlockedAt": null,
+    "points": 75,
+    "category": "category"
+  },
+  {
+    "Id": 6,
+    "name": "Early Bird",
+    "description": "Complete habits before 8 AM for 5 days",
+    "icon": "Sunrise",
+    "unlockedAt": null,
+    "points": 40,
+    "category": "time"
+  },
+  {
+    "Id": 7,
+    "name": "Perfect Week",
+    "description": "Complete all habits for a full week",
+    "icon": "Star",
+    "unlockedAt": null,
+    "points": 150,
+    "category": "completion"
+  },
+  {
+    "Id": 8,
+    "name": "Habit Architect",
+    "description": "Maintain 5 habits simultaneously",
+    "icon": "Building",
+    "unlockedAt": null,
+    "points": 80,
+    "category": "management"
+  }
+]

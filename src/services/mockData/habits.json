@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "name": "Morning Meditation",
+    "category": "Wellness",
+    "frequency": "daily",
+    "target": 1,
+    "difficulty": 2,
+    "createdAt": "2024-01-01T08:00:00Z",
+    "color": "#8B5CF6",
+    "description": "10 minutes of mindfulness meditation",
+    "icon": "Brain"
+  },
+  {
+    "Id": 2,
+    "name": "Drink 8 Glasses of Water",
+    "category": "Health",
+    "frequency": "daily",
+    "target": 8,
+    "difficulty": 1,
+    "createdAt": "2024-01-01T09:00:00Z",
+    "color": "#3B82F6",
+    "description": "Stay hydrated throughout the day",
+    "icon": "Droplets"
+  },
+  {
+    "Id": 3,
+    "name": "Read for 30 Minutes",
+    "category": "Personal Development",
+    "frequency": "daily",
+    "target": 30,
+    "difficulty": 2,
+    "createdAt": "2024-01-02T10:00:00Z",
+    "color": "#10B981",
+    "description": "Read books for personal and professional growth",
+    "icon": "BookOpen"
+  },
+  {
+    "Id": 4,
+    "name": "Exercise",
+    "category": "Fitness",
+    "frequency": "daily",
+    "target": 1,
+    "difficulty": 3,
+    "createdAt": "2024-01-03T07:00:00Z",
+    "color": "#F59E0B",
+    "description": "30 minutes of physical activity",
+    "icon": "Dumbbell"
+  },
+  {
+    "Id": 5,
+    "name": "Weekly Planning",
+    "category": "Productivity",
+    "frequency": "weekly",
+    "target": 1,
+    "difficulty": 2,
+    "createdAt": "2024-01-07T16:00:00Z",
+    "color": "#EF4444",
+    "description": "Plan and organize the upcoming week",
+    "icon": "Calendar"
+  }
+]

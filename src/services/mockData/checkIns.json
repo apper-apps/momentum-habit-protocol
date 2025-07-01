@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "habitId": 1,
+    "date": "2024-01-15T08:15:00Z",
+    "completed": true,
+    "notes": "Great session, felt very centered",
+    "mood": 5
+  },
+  {
+    "Id": 2,
+    "habitId": 2,
+    "date": "2024-01-15T20:00:00Z",
+    "completed": true,
+    "notes": "Stayed hydrated all day",
+    "mood": 4
+  },
+  {
+    "Id": 3,
+    "habitId": 3,
+    "date": "2024-01-15T21:30:00Z",
+    "completed": true,
+    "notes": "Read about productivity techniques",
+    "mood": 4
+  },
+  {
+    "Id": 4,
+    "habitId": 4,
+    "date": "2024-01-15T07:30:00Z",
+    "completed": false,
+    "notes": "Skipped due to meeting",
+    "mood": 2
+  },
+  {
+    "Id": 5,
+    "habitId": 1,
+    "date": "2024-01-14T08:00:00Z",
+    "completed": true,
+    "notes": "Morning routine established",
+    "mood": 5
+  },
+  {
+    "Id": 6,
+    "habitId": 2,
+    "date": "2024-01-14T19:45:00Z",
+    "completed": true,
+    "notes": "Hit water goal early",
+    "mood": 4
+  },
+  {
+    "Id": 7,
+    "habitId": 3,
+    "date": "2024-01-14T22:00:00Z",
+    "completed": true,
+    "notes": "Finished chapter on habits",
+    "mood": 5
+  },
+  {
+    "Id": 8,
+    "habitId": 4,
+    "date": "2024-01-14T07:00:00Z",
+    "completed": true,
+    "notes": "Great morning run",
+    "mood": 5
+  },
+  {
+    "Id": 9,
+    "habitId": 1,
+    "date": "2024-01-13T08:10:00Z",
+    "completed": true,
+    "notes": "Focused on breathing",
+    "mood": 4
+  },
+  {
+    "Id": 10,
+    "habitId": 2,
+    "date": "2024-01-13T18:30:00Z",
+    "completed": false,
+    "notes": "Only managed 6 glasses",
+    "mood": 3
+  }
+]
