@@ -1,12 +1,28 @@
 import userStatsData from '@/services/mockData/userStats.json'
 
 class UserService {
-constructor() {
-    // Deep clone to ensure all nested objects are mutable
-    this.stats = JSON.parse(JSON.stringify(userStatsData))
+  constructor() {
+    // Deep clone with guaranteed mutability for all nested objects
+    this.stats = this.deepClone(userStatsData)
   }
 
-  async delay(ms = 250) {
+  // Utility method to create truly mutable deep copies
+  deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') return obj
+    if (obj instanceof Date) return new Date(obj.getTime())
+    if (obj instanceof Array) return obj.map(item => this.deepClone(item))
+    
+    // Create a new object with mutable properties
+    const cloned = {}
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        cloned[key] = this.deepClone(obj[key])
+      }
+    }
+    return cloned
+  }
+
+  delay(ms = 250) {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
@@ -35,16 +51,51 @@ constructor() {
     return { ...this.stats }
   }
 
-  async updateStreak(habitId, newStreak) {
+async updateStreak(habitId, newStreak) {
     await this.delay()
-    this.stats.currentStreaks[habitId] = newStreak
     
-    // Update longest streak if necessary
-    if (newStreak > (this.stats.longestStreaks[habitId] || 0)) {
-      this.stats.longestStreaks[habitId] = newStreak
+    try {
+      // Ensure currentStreaks object exists and is mutable
+      if (!this.stats.currentStreaks) {
+        this.stats.currentStreaks = {}
+      }
+      
+      // Safe property assignment using spread operator
+      this.stats.currentStreaks = {
+        ...this.stats.currentStreaks,
+        [habitId]: newStreak
+      }
+      
+      // Update longest streak if necessary
+      if (newStreak > (this.stats.longestStreaks?.[habitId] || 0)) {
+        // Ensure longestStreaks object exists and is mutable
+        if (!this.stats.longestStreaks) {
+          this.stats.longestStreaks = {}
+        }
+        
+        this.stats.longestStreaks = {
+          ...this.stats.longestStreaks,
+          [habitId]: newStreak
+        }
+      }
+      
+      return { ...this.stats }
+    } catch (error) {
+      console.error('Error updating streak:', error)
+      // Fallback: recreate stats object if assignment fails
+      this.stats = this.deepClone({
+        ...this.stats,
+        currentStreaks: {
+          ...this.stats.currentStreaks,
+          [habitId]: newStreak
+        },
+        longestStreaks: {
+          ...this.stats.longestStreaks,
+          [habitId]: newStreak > (this.stats.longestStreaks?.[habitId] || 0) ? newStreak : this.stats.longestStreaks?.[habitId]
+        }
+      })
+      return { ...this.stats }
     }
-    
-    return { ...this.stats }
   }
 
   async incrementDaysTracked() {
